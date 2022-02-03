@@ -24,6 +24,8 @@ body {
 }
 
 .container {
+  width: 80vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,9 +52,14 @@ li {
   font-family: Bebas Neue Cyrillic;
   font-style: normal;
   font-weight: normal;
-  font-size: 35px;
+  font-size: 2rem;
   line-height: 120%;
   list-style-type: none;
+}
+.main {
+  margin-top: 25vh;
+  width: 100%;
+  height: 90vh;
 }
 h1 {
   font-family: "Bebas Neue Cyrillic Regular";
@@ -72,16 +79,60 @@ h1 {
   height: 50%;
 }
 
+.download {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.download div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.download div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.download div img {
+  margin-top: 20px;
+}
+
 /* ===   ABSOLUTE ELEMENTS === */
 
 .right-light {
   position: absolute;
+  top: -30vh;
   right: 0;
+  height: 1000vh;
+  z-index: -1;
 }
 
 .left-light {
   position: absolute;
+  top: -30vh;
   left: 0;
+  height: 1000vh;
+  z-index: -1;
+}
+
+.left-girl {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  top: 5%;
+  width: 50vw;
+}
+
+.right-girl {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  top: 5%;
+  width: 38vw;
 }
 
 .main-text-back {
@@ -91,16 +142,11 @@ h1 {
   height: 100%;
 }
 
-.main {
-  margin-top: 25vh;
-  width: 100%;
-  height: 90vh;
-}
-
 .main-back {
   position: absolute;
-  top: -10%;
-  z-index: -1;
+  width: 100vw;
+  top: 0;
+  z-index: -2;
 }
 
 .back {
@@ -114,3 +160,268 @@ h1 {
 }
 
 /* ====================== */
+
+/* 
+=======  ABOUT SECTION  ++++++++
+++++++++++++++++++++++++++++++++++++++++++++= */
+
+h2 {
+  font-size: 5rem;
+  line-height: 5rem;
+  font-family: "Bebas Neue Cyrillic Regular";
+  font-style: normal;
+  font-weight: 550;
+  text-align: center;
+}
+.about {
+  width: 60vw;
+}
+
+.about p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 3.5rem;
+  text-align: center;
+  padding: 0 9rem;
+}
+
+/* ========== GAMES SECTION +++++++++++++++++++++++++++=
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++====================== */
+
+.games {
+  margin-top: 8rem;
+}
+
+h4 {
+  font-family: "Bebas Neue Cyrillic Regular";
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.games div p {
+  text-align: center;
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  justify-content: center;
+}
+
+.first-row div,
+.second-row div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.second-row {
+  display: flex;
+}
+
+.border {
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+/* 
+============   ABOUT_ GAMES SECTION ===============================
++=============================================================
+*/
+
+.about-games {
+  width: 60vw;
+  margin-top: 13rem;
+}
+
+.inner-about-games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.phone {
+  width: 100%;
+}
+
+.inner-about-games h4,
+.faq h4 {
+  color: #6dcb1f;
+  margin: 2rem 0;
+}
+
+.inner-about-games div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ============= TEXT PNG======================== */
+
+/* === NEWS SECTION ++++++++++++++++++++++++==
+====================================== */
+
+/* ================== FAQ SECTION +============================
+=============================================================== */
+
+.questions {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+}
+
+.questions div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem;
+}
+
+.questions h4 {
+  text-align: left;
+}
+/* 
+=====================================================
+=========   TOURNEY =================================
+*/
+
+.tourney {
+  margin: 13rem auto;
+  width: 40vw;
+}
+
+.text {
+  width: 40vw;
+  margin-top: 9rem;
+}
+
+/*============================================================= */
+
+.upp-footer {
+  margin-bottom: 9rem;
+}
+
+.footer {
+  padding: 50px 70px;
+  border-radius: 60px;
+  width: 75vw;
+  height: 400px;
+  background-image: url("./img/фон\ под\ футер.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer ul {
+  width: 18vw;
+  margin: 0;
+}
+
+.footer-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #6dcb1f;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.footer-form p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+/* ================ FOOTER INPUT =====================
+============================================== */
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #310d67;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #6dcb1f;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #6dcb1f;
+  color: #ffffff;
+  border-radius: 0 8px 8px 0;
+  border: 0;
+  padding: 23px 18px;
+  font-family: Bebas Neue Cyrillic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+.form__field {
+  width: 300px;
+  background-color: transparent;
+  border: 1px solid #6dcb1f;
+  color: #6dcb1f;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 22px 18px;
+}
+
+.btn--inside {
+  margin-left: -7px;
+}
+
+/*  */
+/*  */
+/* START RESPONSIVE */
+/* 
+=
+==
+====
+====
+======= */
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 12px;
+  }
+  .logo {
+    width: 200px;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 9px;
+  }
+}
