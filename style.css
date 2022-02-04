@@ -103,6 +103,58 @@ h1 {
 
 /* ===   ABSOLUTE ELEMENTS === */
 
+.main-chips {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  z-index: -3;
+  animation: chips 3s infinite ease-in;
+}
+
+@keyframes chips {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -25px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.chips {
+  position: absolute;
+  width: 30vw;
+  left: 0;
+  top: 150vh;
+  z-index: -2;
+}
+
+.phone-chips {
+  position: absolute;
+  right: 0;
+  top: 305vh;
+  width: 55vw;
+  z-index: -2;
+}
+
+.cards-chips {
+  position: absolute;
+  right: 0;
+  top: 450vh;
+  width: 30vw;
+  z-index: -2;
+}
+
+.text-chips {
+  position: absolute;
+  left: 0;
+  top: 510vh;
+  width: 30vw;
+  z-index: -2;
+}
+
 .right-light {
   position: absolute;
   top: -30vh;
@@ -265,6 +317,108 @@ h4 {
 /* === NEWS SECTION ++++++++++++++++++++++++==
 ====================================== */
 
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.slider-text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 1rem;
+  left: 20px;
+  text-align: center;
+}
+.slider-text h5 {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #630a77;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #b307cf;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
 /* ================== FAQ SECTION +============================
 =============================================================== */
 
@@ -310,7 +464,7 @@ h4 {
   padding: 50px 70px;
   border-radius: 60px;
   width: 75vw;
-  height: 400px;
+  height: auto;
   background-image: url("./img/фон\ под\ футер.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -320,7 +474,7 @@ h4 {
 }
 
 .footer ul {
-  width: 18vw;
+  width: 35%;
   margin: 0;
 }
 
@@ -354,6 +508,10 @@ h5 {
 
 /* ================ FOOTER INPUT =====================
 ============================================== */
+
+.form {
+  display: flex;
+}
 
 a {
   color: inherit;
@@ -389,7 +547,6 @@ a:hover {
   line-height: 1.2rem;
 }
 .form__field {
-  width: 300px;
   background-color: transparent;
   border: 1px solid #6dcb1f;
   color: #6dcb1f;
@@ -423,5 +580,56 @@ a:hover {
 @media (max-width: 1024px) {
   html {
     font-size: 9px;
+  }
+}
+
+@media (max-width: 912px) and (max-height: 1368px) {
+  .main {
+    margin-top: 5vh;
+    height: 50vh;
+  }
+  .container {
+    width: 90vw;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .first-row div,
+  .second-row div {
+    width: 40%;
+  }
+}
+@media (max-width: 820px) {
+  .questions {
+    width: 80vw;
+  }
+  .second-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .border {
+    border-left: 0;
+    border-right: 0;
+  }
+  .second-row div,
+  .first-row div {
+    border-bottom: 1px solid #ffffff;
+    width: 70%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 5px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .footer {
+    padding: 50px 20px;
+  }
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
   }
 }
