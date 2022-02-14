@@ -9,17 +9,15 @@
     <title>ZZ Poker</title>
   </head>
   <body>
-    <img class="left-light" src="./img/свечение вдоль лево.png" alt="" />
-    <img class="right-light" src="./img/свечение вдоль.png" alt="" />
-    <img class="left-girl" src="./img/тян слева (1) 1.png" alt="" />
-    <img class="right-girl" src="./img/тян справа 1.png" alt="" />
+    <!-- <img class="left-light" src="./img/свечение вдоль лево.png" alt="" />
+    <img class="right-light" src="./img/свечение вдоль.png" alt="" /> -->
     <img class="main-chips" src="./img/золотые фишки.png" alt="" />
     <img class="chips" src="./img/фишки.png" alt="" />
     <img class="phone-chips" src="./img/phone-chips.png" alt="" />
     <img class="cards-chips" src="./img/cards-chips.png" alt="" />
     <img class="text-chips" src="./img/text-chips.png" alt="" />
     <header>
-      <ul>
+      <ul class="menu">
         <div class="back"></div>
         <li>
           <img class="logo" src="./img/logo.svg" alt="logo" />
@@ -30,11 +28,20 @@
         <li>FAQ</li>
         <li><img src="./img/language.svg" alt="" /></li>
       </ul>
+      <div class="burger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
     </header>
     <main>
       <div class="main container">
         <img class="main-back" src="./img/свечение первый экран.png" alt="" />
         <div class="main-text">
+          <img class="under-girls" src="./img/Group 700.png" alt="" />
+          <img class="left-girl" src="./img/тян слева (1) 1.png" alt="" />
+          <img class="right-girl" src="./img/тян справа 1.png" alt="" />
+
           <img
             class="main-text-back"
             src="./img/фон под заголовок.png"
@@ -45,15 +52,23 @@
             <br />
             игрой в покер
           </h1>
-        </div>
-        <div class="download">
-          <div>
-            <img src="./img/download/google.svg" alt="" />
-            <img src="./img/download/mac.svg" alt="" />
+          <div class="download desk-download">
+            <div class="download-left">
+              <img width="100%" src="./img/download/google.svg" alt="" />
+              <img width="80%" src="./img/download/mac.svg" alt="" />
+            </div>
+            <div class="download-right">
+              <img width="100%" src="./img/download/android.svg" alt="" />
+              <img width="80%" src="./img/download/windows.svg" alt="" />
+            </div>
           </div>
-          <div>
+          <div class="phone-download">
+            <img src="./img/download/google.svg" alt="" />
             <img src="./img/download/android.svg" alt="" />
-            <img src="./img/download/windows.svg" alt="" />
+            <div>
+              <img src="./img/download/mac.svg" alt="" />
+              <img src="./img/download/windows.svg" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -160,10 +175,16 @@
         </div>
       </section>
       <section class="about-games container">
-        <div class="inner-about-games">
-          <div>
+        <div class="inner-about-games inner-about-games-2">
+          <div class="card-block">
             <img
+              width="150%"
               class="phone"
+              src="./img/карты у особенностей.png"
+              alt=""
+            />
+            <img
+              class="phone chip"
               src="./img/свечение под картами у особенностей.png"
               alt=""
             />
@@ -201,12 +222,12 @@
             </div>
 
             <div class="mySlides fade">
-              <img src="./img/slider1.png" style="width: 100%" />
+              <img src="./img/Rectangle 109.png" style="width: 100%" />
               <div class="slider-text">Caption Two</div>
             </div>
 
             <div class="mySlides fade">
-              <img src="./img/slider1.png" style="width: 100%" />
+              <img src="./img/Rectangle 179.png" style="width: 100%" />
               <div class="slider-text">Caption Three</div>
             </div>
 
@@ -252,10 +273,6 @@
             </p>
           </div>
         </div>
-        <p>
-          Больше ответов <br />
-          на вопросы
-        </p>
       </section>
       <section class="tourney container">
         <h2>турниры</h2>
@@ -271,9 +288,9 @@
           Ты готов сыграть в незабываемой атмосфере азарта и стать чемпионом?
           Скачивай ZZpoker уже сейчас!
         </h2>
-        <div class="download">
+        <div class="download download-footer">
           <div>
-            <img src="./img/download/google.svg" alt="" />
+            <img width="100%" src="./img/download/google.svg" alt="" />
             <img src="./img/download/mac.svg" alt="" />
           </div>
           <div>

@@ -9,8 +9,6 @@ function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
-setTimeout();
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -30,5 +28,27 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+// Change image every 2 seconds
 
-setTimeout(showSlides(1), 1000); // Change image every 2 seconds
+// ++++++++++++++++++++++ FOR BURGER ++++++++++++++++++++++==
+// ==========================================================
+
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".menu");
+const links = document.querySelectorAll(".menu li");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("nav-active");
+
+  burger.classList.toggle("toggle");
+
+  links.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinksFade .5s ease forwards ${
+        index / 7 + 0.3
+      }s`;
+    }
+  });
+});

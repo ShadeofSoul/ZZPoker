@@ -9,9 +9,10 @@
   font-weight: 500;
   font-style: normal;
 }
-
+::-webkit-scrollbar {
+  width: 0;
+}
 html {
-  /* box-shadow: inset 55px 0 55px 55px rgba(173, 36, 228, 0.863); */
   box-shadow: inset 0px 0px 70px 70px #310d67;
   animation: html 1.7s infinite alternate;
 }
@@ -30,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #310d67;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -49,10 +51,14 @@ body {
 
 header {
   width: 100vw;
+  z-index: 3;
   top: 0;
   margin: 0;
   position: fixed;
   color: #ffffff;
+}
+.logo {
+  width: 250px;
 }
 
 ul {
@@ -73,29 +79,35 @@ li {
   list-style-type: none;
 }
 .main {
-  margin-top: 30vh;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 h1 {
   font-family: "Bebas Neue Cyrillic Regular";
   text-transform: uppercase;
   font-style: normal;
   font-weight: normal;
-  font-size: 8.5rem;
+  font-size: 7.7rem;
   text-align: center;
   margin: 0;
+  position: absolute;
 }
 .main-text {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 150%;
+}
+
+.phone-download {
+  display: none;
 }
 
 .download {
+  position: absolute;
+  bottom: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
@@ -146,14 +158,14 @@ p {
   position: absolute;
   width: 30vw;
   left: 0;
-  top: 150vh;
+  top: 200vh;
   z-index: -2;
 }
 
 .phone-chips {
   position: absolute;
   right: 0;
-  top: 305vh;
+  top: 450vh;
   width: 55vw;
   z-index: -2;
 }
@@ -161,7 +173,7 @@ p {
 .cards-chips {
   position: absolute;
   right: 0;
-  top: 450vh;
+  top: 700vh;
   width: 30vw;
   z-index: -2;
 }
@@ -169,7 +181,7 @@ p {
 .text-chips {
   position: absolute;
   left: 0;
-  top: 510vh;
+  top: 800vh;
   width: 30vw;
   z-index: -2;
 }
@@ -182,35 +194,48 @@ p {
   z-index: -1;
 }
 
-.left-light {
+.under-girls {
+  width: 100%;
+  bottom: -24%;
   position: absolute;
-  top: -30vh;
-  left: 0;
-  height: 1000vh;
-  z-index: -1;
+  left: -20px;
+  /* animation: under-girls 3s infinite ease-in-out; */
+}
+
+@keyframes under-girls {
+  0% {
+    top: 70vh;
+  }
+  50% {
+    top: 65vh;
+  }
+  100% {
+    top: 70vh;
+  }
 }
 
 .left-girl {
   position: absolute;
   left: 0;
   z-index: -1;
-  top: 5%;
-  width: 60vw;
+  bottom: 0;
+  /* top: 5%; */
+  width: 55vw;
   transform: rotate(1deg);
   animation: left-girl 5s infinite ease-in-out;
 }
 @keyframes left-girl {
   0% {
     transform: rotate(1deg);
-    width: 60vw;
+    width: 55vw;
   }
   50% {
     transform: rotate(-1deg);
-    width: 58vw;
+    width: 53vw;
   }
   100% {
     transform: rotate(1deg);
-    width: 60vw;
+    width: 55vw;
   }
 }
 
@@ -218,31 +243,31 @@ p {
   position: absolute;
   right: 0;
   z-index: -1;
-  top: 5%;
-  width: 45vw;
+  bottom: 0;
+  width: 40vw;
   animation: right-girl 5s infinite ease-in-out;
 }
 
 @keyframes right-girl {
   0% {
     transform: rotate(1deg);
-    width: 45vw;
+    width: 40vw;
   }
   50% {
     transform: rotate(-1deg);
-    width: 43vw;
+    width: 38vw;
   }
   100% {
     transform: rotate(1deg);
-    width: 45vw;
+    width: 40vw;
   }
 }
 
 .main-text-back {
   position: absolute;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 60%;
 }
 
 .main-back {
@@ -269,7 +294,7 @@ p {
 ++++++++++++++++++++++++++++++++++++++++++++= */
 
 h2 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 5rem;
   font-family: "Bebas Neue Cyrillic Regular";
   font-style: normal;
@@ -277,7 +302,8 @@ h2 {
   text-align: center;
 }
 .about {
-  width: 60vw;
+  margin-top: 100px;
+  width: 70vw;
 }
 
 .about p {
@@ -304,7 +330,7 @@ h4 {
 }
 
 .games div p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -362,6 +388,20 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+/* ====================inner-about-games-2==================== */
+.inner-about-games-2 {
+  width: 80vw;
+  grid-template-columns: 1.1fr 0.9fr;
+  column-gap: 50px;
+}
+.chip {
+  position: absolute;
+  z-index: -2;
+}
+
+.card-block {
+  position: relative;
 }
 
 /* ============= TEXT PNG======================== */
@@ -497,7 +537,7 @@ h4 {
 */
 
 .tourney {
-  margin: 13rem auto;
+  margin: 5rem auto;
   width: 40vw;
 }
 
@@ -510,6 +550,13 @@ h4 {
 
 .upp-footer {
   margin-bottom: 9rem;
+}
+
+.download-footer {
+  position: static;
+}
+.download-left,
+.download-right {
 }
 
 .footer {
@@ -677,21 +724,96 @@ a:hover {
     border-bottom: 1px solid #ffffff;
     width: 70%;
   }
+  .main-back {
+    display: none;
+  }
 }
 
 @media (max-width: 540px) {
   html {
     font-size: 9px;
+    box-shadow: inset 0px 0px 10px 10px #310d67;
+    animation: html 1.7s infinite alternate;
   }
+
+  .desk-download {
+    display: none;
+  }
+
+  .phone-download {
+    position: absolute;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+  }
+  .phone-download img {
+    margin-bottom: 15px;
+  }
+  .main {
+    height: 80vh;
+    width: 100vw;
+  }
+
+  .main-text {
+    height: 100%;
+  }
+  .main-text-back {
+    height: 30%;
+    width: 70%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+
   h1 {
-    font-size: 5rem;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
   }
+  .right-girl {
+    width: 60vw;
+    animation: none;
+    bottom: 40%;
+  }
+  .left-girl {
+    animation: none;
+    width: 60vw;
+    bottom: 40%;
+  }
+  .under-girls {
+    bottom: 30%;
+    left: -15px;
+  }
+
+  @keyframes html {
+    from {
+      box-shadow: inset 0px 0px 10px 10px #ac12e957;
+    }
+
+    to {
+      box-shadow: inset 0px 0px 30px 30px #9015c0;
+    }
+  }
+
+  .inner-about-games {
+    grid-template-columns: 1fr;
+  }
+  .inner-about-games div {
+    display: block;
+    display: none;
+  }
+  .text {
+    width: 60vw;
+  }
+
   h2 {
     font-size: 3rem;
   }
   .logo {
     width: 100px;
   }
+
   .footer {
     padding: 50px 20px;
   }
@@ -706,4 +828,75 @@ a:hover {
   .footer-form {
     align-items: flex-start;
   }
+}
+
+@media (max-width: 400px) {
+}
+
+/* =================================================================================================
+========================= FOR BURGER ================================== */
+
+.burger {
+  display: none;
+  cursor: pointer;
+  right: 0;
+}
+.line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+}
+
+@media screen and (max-width: 540px) {
+  .menu {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    width: 50vw;
+    height: 50vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+  }
+  .menu li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    margin: 30px 0 0 20px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(45deg) translate(-5px, 16px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translate(-5px, -16px);
 }
