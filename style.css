@@ -121,7 +121,7 @@ h1 {
 }
 
 .phone-download,
-phone-download-footer {
+.phone-download-footer {
   display: none;
 }
 
@@ -174,18 +174,18 @@ p {
   }
 }
 
-.chips {
+.chips1 {
   position: absolute;
   width: 30vw;
   left: 0;
-  top: 200vh;
+  top: 170vh;
   z-index: -2;
 }
 
 .phone-chips {
   position: absolute;
   right: 0;
-  top: 450vh;
+  top: 420vh;
   width: 55vw;
   z-index: -2;
 }
@@ -201,7 +201,7 @@ p {
 .text-chips {
   position: absolute;
   left: 0;
-  top: 800vh;
+  top: 850vh;
   width: 30vw;
   z-index: -2;
 }
@@ -362,7 +362,7 @@ h4 {
 
 .first-row div,
 .second-row div {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -535,6 +535,10 @@ h4 {
 /* ================== FAQ SECTION +============================
 =============================================================== */
 
+.faq {
+  margin-top: 8rem;
+}
+
 .questions {
   width: 60vw;
   display: flex;
@@ -558,7 +562,7 @@ h4 {
 */
 
 .tourney {
-  margin: 5rem auto;
+  margin: 1rem auto;
   width: 40vw;
 }
 
@@ -834,16 +838,13 @@ a:hover {
   }
   .text {
     width: 60vw;
-    margin-top: 0j;
+    margin-top: 4rem;
   }
   .mySlides {
     width: 90vw;
     height: 40vh;
   }
 
-  h2 {
-    font-size: 3rem;
-  }
   .logo {
     width: 100px;
   }
@@ -896,6 +897,22 @@ a:hover {
   }
   .about-games {
     margin-top: 0;
+  }
+  .chips {
+    filter: blur(2px);
+    width: 100vw;
+  }
+  .chips1,
+  .cards-chips {
+    display: none;
+  }
+  .phone-chips {
+    top: 560vh;
+    opacity: 0.5;
+  }
+  .text-chips {
+    top: 480vh;
+    opacity: 0.3;
   }
 }
 
