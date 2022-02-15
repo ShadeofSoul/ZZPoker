@@ -12,6 +12,25 @@
 ::-webkit-scrollbar {
   width: 0;
 }
+
+.mySlides {
+  width: 70vw;
+  height: 534px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+.first-slide {
+  background-image: url("/img/slider1.png");
+}
+.second-slide {
+  background-image: url("/img/Rectangle\ 109.png");
+}
+.third-slide {
+  background-image: url("/img/Rectangle\ 179.png");
+}
+
 html {
   box-shadow: inset 0px 0px 70px 70px #310d67;
   animation: html 1.7s infinite alternate;
@@ -101,7 +120,8 @@ h1 {
   height: 150%;
 }
 
-.phone-download {
+.phone-download,
+phone-download-footer {
   display: none;
 }
 
@@ -745,9 +765,16 @@ a:hover {
     flex-direction: column;
     bottom: 0;
   }
-  .phone-download img {
+  .phone-download img,
+  .phone-download-footer img {
     margin-bottom: 15px;
   }
+  .phone-download-footer {
+    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
   .main {
     height: 80vh;
     width: 100vw;
@@ -807,7 +834,11 @@ a:hover {
   }
   .text {
     width: 60vw;
-    margin-top: 0J;
+    margin-top: 0j;
+  }
+  .mySlides {
+    width: 90vw;
+    height: 40vh;
   }
 
   h2 {
@@ -859,7 +890,8 @@ a:hover {
     grid-template-columns: 1fr;
   }
   .first-phone {
-    padding: 70px;
+    max-width: 60vw;
+    margin: 0 auto;
     transform: rotate(20deg);
   }
   .about-games {
