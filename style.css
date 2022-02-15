@@ -555,9 +555,6 @@ h4 {
 .download-footer {
   position: static;
 }
-.download-left,
-.download-right {
-}
 
 .footer {
   padding: 50px 70px;
@@ -602,7 +599,6 @@ h5 {
   font-style: normal;
   font-weight: normal;
   font-size: 0.7rem;
-  line-height: 1rem;
 }
 
 /* ================ FOOTER INPUT =====================
@@ -818,8 +814,12 @@ a:hover {
     padding: 50px 20px;
   }
   .footer-row {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .footer-row:nth-child(2) {
+    flex-direction: column-reverse;
   }
   .footer ul {
     margin-top: 30px;
@@ -828,9 +828,42 @@ a:hover {
   .footer-form {
     align-items: flex-start;
   }
+  .second-row div,
+  .first-row div {
+    width: 100%;
+  }
+  .about p {
+    padding: 0;
+  }
+  p {
+    font-size: 1.8rem !important  ;
+  }
+  h4 {
+    font-size: 2.4rem;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+  .right-girl {
+    width: 70vw;
+    bottom: 48%;
+  }
+  .left-girl {
+    width: 70vw;
+    bottom: 50%;
+  }
+  .under-girls {
+    bottom: 40%;
+    left: -30px;
+  }
+  .main-text-back {
+    width: 100%;
+    height: 35%;
+    top: 42%;
+  }
+  h1 {
+    top: 43%;
+  }
 }
 
 /* =================================================================================================
