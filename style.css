@@ -1,4 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #310d67;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader__row {
+  width: 100px;
+  animation: spin 6s linear 0s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded .preloader {
+  display: none;
+}
 
 @font-face {
   font-family: "Bebas Neue Cyrillic Regular";
@@ -11,6 +45,33 @@
 }
 ::-webkit-scrollbar {
   width: 0;
+}
+a {
+  font-family: "Bebas Neue Cyrillic Regular" !important;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 120%;
+  list-style-type: none;
+}
+
+header input {
+  display: none;
+}
+a:hover {
+  color: #6dcb1f;
+}
+
+.menu li:last-child {
+  font-size: 1.5rem;
+}
+.menu li:last-child:hover {
+  color: #6dcb1f;
+}
+
+.menu li:last-child:hover path {
+  fill: #6dcb1f;
 }
 
 .mySlides {
@@ -90,10 +151,9 @@ ul {
 }
 
 li {
-  font-family: Bebas Neue Cyrillic;
   font-style: normal;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 120%;
   list-style-type: none;
 }
@@ -128,25 +188,24 @@ h1 {
 .download {
   position: absolute;
   bottom: 10%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .download div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .download div:first-child {
   display: flex;
-  flex-direction: column;
+
   align-items: flex-end;
 }
 .download div img {
-  margin-top: 20px;
+  padding: 10px 0 0 10px;
 }
 p {
   font-size: 1.5rem;
@@ -481,7 +540,7 @@ h4 {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.slider-dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -493,7 +552,7 @@ h4 {
 }
 
 .active,
-.dot:hover {
+.slider-dot:hover {
   background-color: #b307cf;
 }
 
@@ -631,14 +690,6 @@ h5 {
 
 .form {
   display: flex;
-}
-
-a {
-  color: inherit;
-}
-
-a:hover {
-  color: #310d67;
 }
 
 .uppercase {
@@ -780,7 +831,7 @@ a:hover {
   }
 
   .main {
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
   }
 
@@ -926,7 +977,7 @@ a:hover {
     bottom: 50%;
   }
   .under-girls {
-    bottom: 40%;
+    bottom: 45%;
     left: -30px;
   }
   .main-text-back {
@@ -942,6 +993,81 @@ a:hover {
   }
 }
 
+/* ===
+=====
+===
+==   DROP DOWN MENU 
+====
+===
+=== */
+
+.dropdown {
+  position: relative;
+  width: 130px;
+  filter: url(#goo);
+}
+.dropdown__arrow {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg) translateY(-50%);
+  transform-origin: right;
+}
+.dropdown__face,
+.dropdown__items {
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.dropdown__face {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+li:last-child:hover .dropdown__face {
+  color: #6dcb1f;
+}
+.dropdown__items {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.dropdown__items::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  height: 40px;
+  width: 20px;
+}
+
+input:checked ~ .dropdown__items {
+  top: calc(100% + 20px);
+  visibility: visible;
+  opacity: 1;
+  background-color: #9015c0;
+}
+
+input:checked ~ .dropdown__face {
+  background-color: #9015c0;
+}
+
+.svg {
+  display: none;
+}
+
 /* =================================================================================================
 ========================= FOR BURGER ================================== */
 
@@ -950,6 +1076,7 @@ a:hover {
   cursor: pointer;
   right: 0;
 }
+
 .line {
   width: 25px;
   height: 3px;
@@ -966,7 +1093,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 0;
     width: 50vw;
-    height: 50vh;
+    height: 70vh;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -1009,3 +1136,156 @@ a:hover {
 .toggle .line3 {
   transform: rotate(-45deg) translate(-5px, -16px);
 }
+
+/* ===
+====
+======
+==== 
+===
+==
+
+=
+=
+=
+=
+*/
+
+.email-bt {
+  background: #b307cf;
+  border-radius: 50%;
+  box-shadow: 0 8px 10px rgba(252, 36, 223, 0.3);
+  cursor: pointer;
+  height: 68.5px;
+  text-align: center;
+  width: 68.5px;
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  z-index: 999;
+  transition: 0.3s;
+  -webkit-animation: email-an linear 1s infinite;
+  animation: email-an linear 1s infinite;
+}
+
+.email-bt .text-call {
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.email-bt .text-call span {
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  font-size: 0;
+  position: absolute;
+  right: 4px;
+  top: 22px;
+  line-height: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: opacity 0.3s linear;
+  font-family: "montserrat", Arial, Helvetica, sans-serif;
+}
+
+.email-bt .text-call:hover span {
+  opacity: 1;
+  font-size: 11px;
+}
+.email-bt:hover i {
+  display: none;
+}
+
+.email-bt:hover {
+  z-index: 1;
+  background: #fff;
+  transition: 0.3s;
+}
+.email-bt:hover i {
+  color: #38a3fd;
+  font-size: 40px;
+  transition: 0.3s;
+}
+.email-bt i {
+  color: #fff;
+  font-size: 29px;
+  transition: 0.3s;
+  line-height: 66px;
+}
+
+.email-bt i {
+  -webkit-animation: opsimple 3s infinite;
+  animation: opsimple 3s infinite;
+}
+
+@-webkit-keyframes email-an {
+  0% {
+    box-shadow: 0 8px 10px rgba(211, 24, 249, 0.3),
+      0 0 0 0 rgba(249, 24, 219, 0.2), 0 0 0 0 rgba(249, 24, 219, 0.2);
+  }
+  40% {
+    box-shadow: 0 8px 10px rgba(249, 24, 91, 0.3),
+      0 0 0 15px rgba(249, 92, 24, 0.2), 0 0 0 0 rgba(249, 24, 219, 0.2);
+  }
+  80% {
+    box-shadow: 0 8px 10px rgba(249, 24, 99, 0.3),
+      0 0 0 30px rgba(249, 24, 211, 0), 0 0 0 26.7px rgba(249, 24, 238, 0.067);
+  }
+  100% {
+    box-shadow: 0 8px 10px rgba(249, 24, 148, 0.3),
+      0 0 0 30px rgba(185, 24, 249, 0), 0 0 0 40px rgba(249, 24, 249, 0);
+  }
+}
+@keyframes email-an {
+  0% {
+    box-shadow: 0 8px 10px rgba(249, 24, 118, 0.3),
+      0 0 0 0 rgba(249, 24, 193, 0.2), 0 0 0 0 rgba(249, 24, 181, 0.2);
+  }
+  40% {
+    box-shadow: 0 8px 10px rgba(249, 24, 211, 0.3),
+      0 0 0 15px rgba(249, 24, 249, 0.2), 0 0 0 0rgba (249, 24, 219, 0.2);
+  }
+
+  80% {
+    box-shadow: 0 8px 10px rgba(249, 24, 238, 0.3),
+      0 0 0 30px rgba(185, 24, 249, 0), 0 0 0 26.7px rgba(223, 24, 249, 0.067);
+  }
+  100% {
+    box-shadow: 0 8px 10px rgba(249, 24, 238, 0.3),
+      0 0 0 30px rgba(211, 24, 249, 0), 0 0 0 40px rgba(249, 24, 163, 0);
+  }
+}
+
+@keyframes opsimple {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes opsimple {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* конец кнопки звязи */
