@@ -81,7 +81,7 @@ Highcharts.chart("container", {
     labels: {
       useHTML: true,
       align: "center",
-      distance: 30,
+      distance: 20,
     },
   },
 
@@ -106,7 +106,7 @@ Highcharts.chart("container", {
 
   series: [
     {
-      data: [33, 40, 20, 11, 15, 45, 30],
+      data: [60, 50, 20, 60, 15, 45, 30],
       type: "area",
       dataLabels: {
         enabled: true,

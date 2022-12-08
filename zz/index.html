@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-
+    <script
+      src="https://code.jquery.com/jquery-3.3.0.min.js"
+      integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
+      crossorigin="anonymous"
+    ></script>
     <title>ZZ Poker</title>
     <style>
       #r,
@@ -34,24 +38,117 @@
     </style>
   </head>
   <body>
+    <div class="preloader">
+      <img class="preloader__row" src="./poker_PNG72.png" alt="" />
+    </div>
+    <div type="button" class="email-bt">
+      <div class="text-call">
+        <svg
+          width="68"
+          height="68"
+          viewBox="0 0 68 68"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M34 68C52.7822 68 68 52.7822 68 34C68 15.2178 52.7822 0 34 0C15.2178 0 0 15.2178 0 34C0 52.7822 15.2178 68 34 68ZM15.5578 33.2633L48.3395 20.6238C49.861 20.0742 51.1898 20.995 50.6968 23.2957L50.6997 23.2928L45.118 49.589C44.7043 51.4533 43.5965 51.9067 42.0467 51.0283L33.5467 44.7638L29.4468 48.7135C28.9935 49.1668 28.611 49.5493 27.7327 49.5493L28.3362 40.8992L44.0895 26.6673C44.7752 26.0638 43.9365 25.7238 43.0327 26.3245L23.5648 38.5815L15.1725 35.9635C13.3507 35.3855 13.311 34.1417 15.5578 33.2633V33.2633Z"
+            fill="black"
+          />
+        </svg>
+        <!-- <span>Обратная<br />связь</span> -->
+      </div>
+    </div>
     <!-- <img class="left-light" src="./img/свечение вдоль лево.png" alt="" />
     <img class="right-light" src="./img/свечение вдоль.png" alt="" /> -->
     <img class="main-chips" src="./img/золотые фишки.png" alt="" />
-    <img class="chips" src="./img/фишки.png" alt="" />
-    <img class="phone-chips" src="./img/phone-chips.png" alt="" />
-    <img class="cards-chips" src="./img/cards-chips.png" alt="" />
-    <img class="text-chips" src="./img/text-chips.png" alt="" />
+    <img class="chips1 chips" src="./img/фишки.png" alt="" />
+    <img class="phone-chips chips" src="./img/phone-chips.png" alt="" />
+    <img class="cards-chips chips" src="./img/cards-chips.png" alt="" />
+    <img class="text-chips chips" src="./img/text-chips.png" alt="" />
     <header>
       <ul class="menu">
         <div class="back"></div>
         <li class="kartochka">
           <img class="logo" src="./img/logo.svg" alt="logo" />
         </li>
+<<<<<<< HEAD:zz/index.html
         <li class="green" id="r">Игры</li>
         <li>Турниры</li>
         <li>Новости</li>
         <li>FAQ</li>
         <li><img src="./img/language.svg" alt="" /></li>
+=======
+        <li>
+          <a href="#games"> Игры </a>
+        </li>
+        <li>
+          <a href="#tourney"> Турниры </a>
+        </li>
+        <li>
+          <a href="#news"> Новости </a>
+        </li>
+        <li>
+          <a href="#faq"> FAQ </a>
+        </li>
+
+        <!-- ==============
+          ============================== -->
+        <li>
+          <div class="dropdown">
+            <input type="checkbox" id="dropdown" />
+
+            <label class="dropdown__face" for="dropdown">
+              <svg
+                width="26"
+                height="27"
+                viewBox="0 0 26 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 0.900391C10.4288 0.900391 7.91543 1.66283 5.77759 3.09129C3.63975 4.51974 1.97351 6.55007 0.989572 8.9255C0.00563272 11.3009 -0.251811 13.9148 0.249797 16.4366C0.751405 18.9583 1.98953 21.2747 3.80762 23.0928C5.6257 24.9109 7.94208 26.149 10.4638 26.6506C12.9856 27.1522 15.5994 26.8948 17.9749 25.9108C20.3503 24.9269 22.3806 23.2606 23.8091 21.1228C25.2376 18.985 26 16.4715 26 13.9004C25.9963 10.4537 24.6254 7.14928 22.1883 4.71212C19.7511 2.27495 16.4467 0.904118 13 0.900391V0.900391ZM22.3676 8.48372H18.8782C18.097 6.67346 17.0686 4.98032 15.8221 3.45272C18.5808 4.20339 20.9325 6.01098 22.3676 8.48372ZM17.875 13.9004C17.8661 15.0034 17.6923 16.0988 17.3593 17.1504H8.64067C8.30771 16.0988 8.1339 15.0034 8.125 13.9004C8.1339 12.7974 8.30771 11.702 8.64067 10.6504H17.3593C17.6923 11.702 17.8661 12.7974 17.875 13.9004ZM9.5095 19.3171H16.4905C15.571 21.1324 14.3955 22.8063 13 24.2874C11.604 22.8067 10.4284 21.1328 9.5095 19.3171ZM9.5095 8.48372C10.429 6.66835 11.6045 4.99448 13 3.51339C14.396 4.99406 15.5716 6.66801 16.4905 8.48372H9.5095ZM10.1833 3.45272C8.93497 4.97999 7.90464 6.67315 7.12184 8.48372H3.63242C5.06876 6.00986 7.42263 4.20212 10.1833 3.45272ZM2.66609 10.6504H6.39167C6.11083 11.7111 5.96523 12.8031 5.95834 13.9004C5.96523 14.9977 6.11083 16.0896 6.39167 17.1504H2.66609C2.00021 15.0349 2.00021 12.7659 2.66609 10.6504ZM3.63242 19.3171H7.12184C7.90464 21.1276 8.93497 22.8208 10.1833 24.3481C7.42263 23.5987 5.06876 21.7909 3.63242 19.3171ZM15.8221 24.3481C17.0686 22.8205 18.097 21.1273 18.8782 19.3171H22.3676C20.9325 21.7898 18.5808 23.5974 15.8221 24.3481ZM23.3339 17.1504H19.6083C19.8892 16.0896 20.0348 14.9977 20.0417 13.9004C20.0348 12.8031 19.8892 11.7111 19.6083 10.6504H23.3318C23.9976 12.7659 23.9976 15.0349 23.3318 17.1504H23.3339Z"
+                  fill="white"
+                />
+              </svg>
+
+              <div class="dropdown__arrow"></div>
+              РУ
+            </label>
+
+            <ul class="dropdown__items">
+              <li>En</li>
+              <li>中文</li>
+            </ul>
+          </div>
+
+          <svg class="svg">
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </svg>
+        </li>
+
+        <!-- <div class="submenu">
+          <ul>
+            <li>EN</li>
+            <li>中文</li>
+          </ul>
+        </div> -->
+        <!-- ====================
+          ===================
+      =========================== -->
+>>>>>>> 5b81d015f2fd868b8c6faa21d7e38357f1522c13:index.html
       </ul>
       <div class="burger">
         <div class="line line1"></div>
@@ -78,29 +175,66 @@
             игрой в покер
           </h1>
           <div class="download desk-download">
-            <div class="download-left">
-              <img width="100%" src="./img/download/google.svg" alt="" />
-              <img width="80%" src="./img/download/mac.svg" alt="" />
+            <div>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.zzpoker.mobile"
+              >
+                <img src="./img/download/google.svg" alt="" />
+              </a>
+
+              <a href="https://files.zzpoker.net/downloads/android/ZZPoker.apk">
+                <img src="./img/download/android.svg" alt="" />
+              </a>
             </div>
-            <div class="download-right">
-              <img width="100%" src="./img/download/android.svg" alt="" />
-              <img width="80%" src="./img/download/windows.svg" alt="" />
+            <div>
+              <a
+                href="https://files.zzpoker.net/downloads/mac/ZZPokerSetup.dmg"
+              >
+                <img src="./img/download/mac.svg" alt="" />
+              </a>
+              <a
+                href="https://files.zzpoker.net/downloads/win/ZZPokerSetup.exe"
+              >
+                <img src="./img/download/windows.svg" alt="" />
+              </a>
             </div>
+            <a href="https://zzpoker.appdlwebs.com/">
+              <img src="./img/download/ios.svg" alt="" />
+            </a>
           </div>
           <div class="phone-download">
-            <img src="./img/download/google.svg" alt="" />
-            <img src="./img/download/android.svg" alt="" />
-            <div>
-              <img src="./img/download/mac.svg" alt="" />
-              <img src="./img/download/windows.svg" alt="" />
-            </div>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.zzpoker.mobile"
+            >
+              <img style="width: 60vw" src="./img/download/google.svg" alt="" />
+            </a>
+            <a href="https://files.zzpoker.net/downloads/android/ZZPoker.apk">
+              <img
+                style="width: 60vw"
+                src="./img/download/android.svg"
+                alt=""
+              />
+            </a>
+            <a href="https://files.zzpoker.net/downloads/mac/ZZPokerSetup.dmg">
+              <img style="width: 60vw" src="./img/download/Mac.svg" alt="" />
+            </a>
+            <a href="https://files.zzpoker.net/downloads/win/ZZPokerSetup.exe">
+              <img
+                style="width: 60vw"
+                src="./img/download/Windows.svg"
+                alt=""
+              />
+            </a>
+            <a href="https://zzpoker.appdlwebs.com/">
+              <img style="width: 60vw" src="./img/download/ios.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
       <section class="about container">
         <h2>
-          Погрузись во вселенную покера на <br />
-          уникальной платформе для игры ZZpoker!
+          Погрузись во вселенную покера на уникальной платформе для игры
+          ZZpoker!
         </h2>
         <p>
           В ZZpoker ты сможешь создавать свои уникальные клубы с адаптивным
@@ -109,7 +243,7 @@
           омаха в клубе с друзьями или за общими столами.
         </p>
       </section>
-      <section class="games container">
+      <section id="games" class="games container">
         <div class="first-row">
           <div>
             <img src="./img/Group.svg" alt="" />
@@ -185,18 +319,17 @@
               шансы на победу, а наш адаптивный интерфейс поможет расположить
               максимально возможное количество столов на твоем устройстве.
             </p>
-            <h4>Игра за несколькими столами сразу</h4>
-            <p>
-              Ты профессионал? Играй за несколькими столами и увеличивай свои
-              шансы на победу, а наш адаптивный интерфейс поможет расположить
-              максимально возможное количество столов на твоем устройстве.
-            </p>
+
             <h4>Удобный чат с игроками и яркие эмоции</h4>
             <p>
               Не скрывай своих эмоций. Пиши все, что хочешь и кидай реакции.
             </p>
           </div>
-          <img class="phone" src="./img/мокап у особенностей.png" alt="" />
+          <img
+            class="phone first-phone"
+            src="./img/мокап у особенностей.png"
+            alt=""
+          />
         </div>
       </section>
       <section class="about-games container">
@@ -232,12 +365,12 @@
       <div class="container">
         <img class="text" src="./img/игры с градиентом.png" alt="" />
       </div>
-      <section class="news container">
+      <section id="news" class="news container">
         <h2>Новости</h2>
         <div class="slider">
           <div class="slideshow-container">
-            <div class="mySlides fade">
-              <img src="./img/slider1.png" style="width: 100%" />
+            <div class="mySlides fade first-slide">
+              <!-- <img src="./img/slider1.png" style="width: 100%" /> -->
               <div class="slider-text">
                 <h5>Дата: 10.11.21</h5>
                 <h5 style="color: #ffffff">
@@ -246,13 +379,13 @@
               </div>
             </div>
 
-            <div class="mySlides fade">
-              <img src="./img/Rectangle 109.png" style="width: 100%" />
+            <div class="mySlides fade second-slide">
+              <!-- <img src="./img/Rectangle 109.png" style="width: 100%" /> -->
               <div class="slider-text">Caption Two</div>
             </div>
 
-            <div class="mySlides fade">
-              <img src="./img/Rectangle 179.png" style="width: 100%" />
+            <div class="mySlides fade third-slide">
+              <!-- <img src="./img/Rectangle 179.png" style="width: 100%" /> -->
               <div class="slider-text">Caption Three</div>
             </div>
 
@@ -262,13 +395,13 @@
           <br />
 
           <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="slider-dot" onclick="currentSlide(1)"></span>
+            <span class="slider-dot" onclick="currentSlide(2)"></span>
+            <span class="slider-dot" onclick="currentSlide(3)"></span>
           </div>
         </div>
       </section>
-      <section class="faq container">
+      <section id="faq" class="faq container">
         <h2>FAQ</h2>
         <div class="questions">
           <div>
@@ -299,7 +432,7 @@
           </div>
         </div>
       </section>
-      <section class="tourney container">
+      <section id="tourney" class="tourney container">
         <h2>турниры</h2>
         <h4>
           ZZPoker регулярно проводит турниры, в которых каждый
@@ -313,25 +446,66 @@
           Ты готов сыграть в незабываемой атмосфере азарта и стать чемпионом?
           Скачивай ZZpoker уже сейчас!
         </h2>
-        <div class="download download-footer">
+        <div class="download download-footer desk-download">
           <div>
-            <img width="100%" src="./img/download/google.svg" alt="" />
-            <img src="./img/download/mac.svg" alt="" />
+            <a
+              href="https://play.google.com/store/apps/details?id=com.zzpoker.mobile"
+            >
+              <img src="./img/download/google.svg" alt="" />
+            </a>
+
+            <a href="https://files.zzpoker.net/downloads/android/ZZPoker.apk">
+              <img src="./img/download/android.svg" alt="" />
+            </a>
           </div>
           <div>
-            <img src="./img/download/android.svg" alt="" />
-            <img src="./img/download/windows.svg" alt="" />
+            <a href="https://files.zzpoker.net/downloads/mac/ZZPokerSetup.dmg">
+              <img src="./img/download/mac.svg" alt="" />
+            </a>
+            <a href="https://files.zzpoker.net/downloads/win/ZZPokerSetup.exe">
+              <img src="./img/download/windows.svg" alt="" />
+            </a>
           </div>
+          <a href="https://zzpoker.appdlwebs.com/">
+            <img src="./img/download/ios.svg" alt="" />
+          </a>
+        </div>
+        <div class="phone-download-footer">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.zzpoker.mobile"
+          >
+            <img style="width: 60vw" src="./img/download/google.svg" alt="" />
+          </a>
+          <a href="https://files.zzpoker.net/downloads/android/ZZPoker.apk">
+            <img style="width: 60vw" src="./img/download/android.svg" alt="" />
+          </a>
+          <a href="https://files.zzpoker.net/downloads/mac/ZZPokerSetup.dmg">
+            <img style="width: 60vw" src="./img/download/Mac.svg" alt="" />
+          </a>
+          <a href="https://files.zzpoker.net/downloads/win/ZZPokerSetup.exe">
+            <img style="width: 60vw" src="./img/download/Windows.svg" alt="" />
+          </a>
+          <a href="https://zzpoker.appdlwebs.com/">
+            <img style="width: 60vw" src="./img/download/ios.svg" alt="" />
+          </a>
         </div>
       </div>
     </main>
     <footer class="footer container">
       <div class="footer-row">
         <ul>
-          <li>Игры</li>
-          <li>Турниры</li>
-          <li>Новости</li>
-          <li>FAQ</li>
+          <li>
+            <a href="#games"> Игры </a>
+          </li>
+          <li>
+            <a href="#tourney"> Турниры </a>
+          </li>
+          <li>
+            <a href="#news"> Новости </a>
+          </li>
+          <li>
+            <a href="#faq"> FAQ </a>
+          </li>
         </ul>
         <ul class="social">
           <li>
@@ -354,7 +528,7 @@
             Условия использования <br />
             Политика конфиденциальности
           </h5>
-          <p>ZZPoker © 2021 Все права защищены</p>
+          <p>ZZPoker © 2022 Все права защищены</p>
         </div>
         <div class="footer-form">
           <form class="form">
@@ -377,5 +551,10 @@
       </div>
     </footer>
     <script src="./main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
