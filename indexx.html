@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .chartMenu {
+      width: 100vw;
+      height: 40px;
+      background: #1a1a1a;
+      color: rgba(54, 162, 235, 0.2);
+    }
+    .chartMenu p {
+      padding: 10px;
+      font-size: 20px;
+    }
+    .chartCard {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(54, 162, 235, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chartBox {
+      width: 600px;
+      height: 600px;
+      border-radius: 20px;
+      border: solid 3px rgba(5, 54, 87, 0.636);
+      background: white;
+    }
+  </style>
+  <body>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <script src="https://www.chartjs.org/dist/master/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/chart.js-plugin-labels-dv@3.0.5/dist/chartjs-plugin-labels.min.js"></script>
+    <script src="./tstst.js"></script>
+  </body>
+</html>

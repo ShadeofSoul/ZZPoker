@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="./style.css" />
 
     <title>ZZ Poker</title>
+    <style>
+      #r,
+      .green {
+        color: yellow;
+      }
+
+      h1,
+      #r {
+        color: red;
+      }
+      h1,
+      .green {
+        color: green;
+      }
+      .kartochka {
+        background-color: #ffffff;
+        border-radius: 0.3em;
+        padding: 0.4em;
+        border: 2px solid transparent;
+      }
+      .kartochka:hover {
+        background-color: #6dcb1f;
+        border: 2px solid red;
+      }
+    </style>
   </head>
   <body>
     <!-- <img class="left-light" src="./img/свечение вдоль лево.png" alt="" />
@@ -19,10 +44,10 @@
     <header>
       <ul class="menu">
         <div class="back"></div>
-        <li>
+        <li class="kartochka">
           <img class="logo" src="./img/logo.svg" alt="logo" />
         </li>
-        <li>Игры</li>
+        <li class="green" id="r">Игры</li>
         <li>Турниры</li>
         <li>Новости</li>
         <li>FAQ</li>
